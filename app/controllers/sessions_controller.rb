@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         password: params[:password]
       }
     })
-    binding.pry
+
     if response.code == 200
       result = JSON.parse(response.body)
       session[:jwt] = result['token']
